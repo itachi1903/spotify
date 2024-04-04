@@ -1,0 +1,6 @@
+.invert{
+    filter: invert();
+}
+.icon {
+    width: 20px;
+}
