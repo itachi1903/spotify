@@ -5,7 +5,7 @@ let songs;
 var spotifyPlaylist = document.querySelector(".spotifyPlaylist");
 async function getdata(folder) {
     currentFolder = folder;
-    let data = await fetch(`/${folder}/`);
+    let data = await fetch(`https://itachi1903.github.io/spotify/${folder}/`);
     let response = await data.text()
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -76,7 +76,7 @@ async function displayAlbum() {
 
         if (e.href.includes("/songs")) {
             let folderName = e.href.split("/").slice(-2)[0]
-            let data = await fetch(`/songs/${folderName}/info.json`);
+            let data = await fetch(`https://itachi1903.github.io/spotify/${folderName}/info.json`);
             let response = await data.json();
             spotifyPlaylist.innerHTML = spotifyPlaylist.innerHTML + `<div data-folder="${folderName}" class="playlist rounded">
             <img src="images/play-button.png" alt="spotify" class="play">
