@@ -64,7 +64,7 @@ function PlaySong(track, pause = false) {
 }
 
 async function displayAlbum() {
-    let data = await fetch("/songs/");
+    let data = await fetch("https://itachi1903.github.io/spotify/songs/");
     let response = await data.text()
     let div = document.createElement("div");
     div.innerHTML = response;
